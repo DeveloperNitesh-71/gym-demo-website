@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bungee&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0B0F19;
+    --Primary-accent: #FF3B3F;
+    --sec: #1F2937;
+    --pri-text: #ffffff;
+    --sec-text: #9CA3AF;
+}
+
+body {
+    background-color: black;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    height: 15vh;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 0px 20px black;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+}
+
+header img {
+    height: 150px;
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+
+}
+
+nav {
+    width: 60%;
+}
+
+nav ul {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul li {
+    list-style: none;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 18px;
+}
+
+nav ul button {
+    padding: 3px 7px;
+    border: 1px solid var(--Primary-accent);
+    background: var(--Primary-accent);
+    color: white;
+    font-family: "poppins";
+    border-radius: 5px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .25s ease;
+}
+
+nav ul button:hover {
+    box-shadow: 0px 0px 20px var(--Primary-accent);
+}
+
+nav ul li a {
+    transition: all .3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    text-shadow: 0px 0px 20px var(--Primary-accent);
+    color: var(--Primary-accent);
+}
+
+.hambergeru{
+    color: white;
+    display: none;
+}
+
+.sideMenu{
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    height: 250px;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #0B0F19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(500px);
+    transition: all .5s ease;
+    box-shadow: 0px 0px 20px #232323;
+    
+}
+
+.sideMenu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.sideMenu ul li{
+    list-style: none;
+    gap: 10px;
+}
+
+
+.sideMenu ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Baloo Bhai 2";
+}
+
+.sideMenu button {
+    padding: 5px 20px;
+    background-color: red;
+    color: white;
+    font-family: "poppins";
+    font-weight: 600;
+    border: none;
+}
+
+.come{
+    transform: translateX(0);
+}
+
+main{
+    width: 100%;
+}
+/* main area  */
+
+.section1 {
+    background-image: url(assets/back11.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.644);
+    z-index: 0;
+}
+
+.headlinePart {
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    padding-inline: 50px;
+    padding-top: 100px;
+    z-index: 1;
+}
+
+
+.subHeadline {
+    width: 100%;
+    color: white;
+    font-family: "poppins";
+    z-index: 1;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.subHeadline p {
+    margin: auto;
+    width: max-content;
+}
+
+.buttons {
+    z-index: 1;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons button {
+    padding: 7px 40px;
+    font-family: "poppins";
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all .3s ease;
+    font-weight: 600;
+}
+
+.Join {
+    background-color: #FF2E2E;
+    border: none;
+    color: white;
+}
+
+.Join:hover{
+    box-shadow: 0px 0px 20px var(--Primary-accent);
+}
+
+.Free {
+    background-color: white;
+    border: none;
+    color: black;
+}
+
+.Free:hover{
+    box-shadow: 0px 0px 20px white;
+}
+
+/* section 2  */
+
+.section2 {
+    background-color: #0B0B0B;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.rates {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    font-family: "poppins";
+    background-color: #1C1C1C;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rates .rate-img {
+    display: flex;
+    align-items: center;
+}
+
+.rate-icon {
+    height: 20px;
+}
+
+.about {
+    padding: 30px;
+    padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "poppins";
+    color: white;
+    font-weight: 600;
+    gap: 20px;
+    width: 100%;
+}
+
+.about img {
+    height: 250px;
+    mask-image: linear-gradient(to bottom, black, white);
+}
+
+.para {
+    font-size: 40px;
+}
+
+.heading1 span {
+    color: #FF3B3F;
+}
+
+.para p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.more {
+    padding: 7px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    transition: all .3s ease;
+}
+
+.more:hover{
+    box-shadow: 0px 0px 20px var(--Primary-accent);
+}
+
+/* section 3  */
+
+.section3 {
+    background-color: #0B0B0B;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section3 h1 {
+    color: white;
+    width: max-content;
+    margin: auto;
+    font-family: "Open Sans", sans-serif;
+}
+
+.cards {
+    padding-block: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 160px;
+    width: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    background-color: #0B0F19;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.card img{
+    height: 60px;
+}
+
+.card h4{
+    color: white;
+    font-family: "poppins";
+}
+
+.card button{
+    padding: 3px 5px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    font-family: "poppins";
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 46, 46, 0.5);
+    box-shadow: 0 12px 35px rgba(255, 46, 46, 0.25);
+}
+
+
+/* section 4  */
+
+.section4{
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0B0B0B;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.heading2{
+    color: white;
+    width: max-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: "Courgette", cursive;
+    font-weight: 600;
+}
+
+.customerCards{
+    padding-block: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Ccard{
+    height: 230px;
+    width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #0B0F19;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    transition: all .3s ease;
+}
+
+.Ccard:hover{
+    transform: translateY(-6px);
+    border-color: rgba(255, 46, 46, 0.5);
+    box-shadow: 0 12px 35px rgba(255, 46, 46, 0.25);
+}
+
+.info{
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trainerImg{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    background-image: url(assets/trainer1.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.name{
+    color: white;
+    font-family: "poppins";
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.talent{
+    color: white;
+    font-family: "poppins";
+    font-size: 13px;
+}
+
+.viewDetails{
+    color: white;
+    font-weight: 600;
+    background-color: red;
+    border: none;
+    padding: 5px 10px;
+    font-family: "poppins";
+    transition: all .3s ease;
+}
+
+.viewDetails:hover{
+    box-shadow: 0px 0px 20px var(--Primary-accent);
+}
+
+.trainerImg2{
+    background-image: url(assets/trainer2.png);
+}
+.trainerImg3{
+    background-image: url(assets/trainer3.png);
+}
+
+/* section 5  */
+
+.section5{
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0B0B0B;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 30px;
+}
+
+.section5 h1{
+    color: white;
+    font-family: "poppins";
+
+}
+
+.plans{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.plan{
+    height: 150px;
+    width: 250px;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    background-color: #0B0F19;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all .3s ease;
+}
+
+.plan:hover{
+    transform: translateY(-6px);
+    border-color: rgba(255, 217, 0, 0.274);
+    box-shadow: 0 12px 35px rgba(255, 217, 0, 0.678);
+}
+
+.pla{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.plan h1{
+    font-size: 25px;
+}
+
+.price{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-family: "poppins";
+}
+
+.price h2{
+    font-size: 20px;
+}
+
+.price h4{
+    font-size: 10px;
+}
+
+.JoinPlan{
+    color: white;
+    padding: 5px 20px;
+    background-color: red;
+    border: none;
+    font-weight: 600;
+    transition: all .3s ease;
+    font-size: 18px;
+}
+
+.JoinPlan:hover{
+    box-shadow: 0px 0px 20px var(--Primary-accent);
+}
+
+.proplan{
+    gap: 20px;
+    padding-inline: 5px;
+    padding-bottom: 5px;
+    background-color: red;
+}
+
+
+
+.prohead{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    gap: 5px;
+}
+
+.prohead .discount{
+    color: white;
+    font-family: "poppins";
+    font-weight: 600;
+    background-color: orange;
+    padding: 5px;
+}
+
+.Propla{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    background-color: #0B0F19;
+    padding: 5px;
+
+}
+
+.Propla .price{
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* section 6  */
+
+.section6{
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0B0B0B;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 30px;
+}
+
+.section6 h1{
+    font-family: "Baloo Bhai 2";
+    color: white;
+}
+
+/* footer */
+
+footer{
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0B0B0B;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 30px;
+}
+
+
+/* media query  */
+
+@media (max-width: 950px) {
+    .headlinePart{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:750px) {
+    nav{
+        display: none;
+    }
+    .hambergeru{
+        display: block;
+    }
+}
+
+@media (max-width: 650px) {
+    .subHeadline p{
+        width: 70%;
+    }
+    
+    .rates{
+        gap: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about{
+        flex-direction: column;
+    }
+    .rates{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px){
+    
+    .buttons{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .heading2{
+        flex-direction: column;
+    }
+}
