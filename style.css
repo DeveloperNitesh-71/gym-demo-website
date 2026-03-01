@@ -663,6 +663,12 @@ main{
     color: white;
 }
 
+.section6 iframe{
+    width: 100%;
+    filter: invert(100%);
+    width: 90%;
+}
+
 /* footer */
 
 footer{
@@ -676,12 +682,113 @@ footer{
     gap: 30px;
 }
 
+.logoArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logoArea img{
+    height: 200px;
+}
+
+.logoArea p{
+    color: white;
+    font-family: "poppins";
+    text-align: center;
+}
+
+.ColumsArea{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: flex-start;
+    width: 90%;
+
+}
+
+.CTA{
+    color: white;
+    font-family: "poppins";
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.CTA button{
+    padding: 5px 20px;
+    font-family: "poppins";
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+    background-color: red;
+    border: none;
+    transition: all .3s ease;
+}
+
+.CTA button:hover{
+    box-shadow: 0px 0px 20px red;
+}
+
+.socialLinks{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.linksArea ul li,
+.ProgramArea ul li,
+.ContactArea ul li,
+.socialLinks ul li{
+    list-style: none;
+    font-family: "poppins";
+    color: white;
+}
+
+
+.linksArea ul li a,
+.ProgramArea ul li a,
+.socialLinks ul li a{
+    transition: all .3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.linksArea ul li a:hover,
+.ProgramArea ul li a:hover,
+.socialLinks ul li a:hover{
+    color: #FF2E2E;
+    text-shadow: 0px 0px 20px var(--Primary-accent);
+}
+
+.socialLinks ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.copyright{
+    color: white;
+    font-family: "poppins";
+    font-size: 13px;
+    text-align: center;
+}
 
 /* media query  */
 
 @media (max-width: 950px) {
     .headlinePart{
         flex-direction: column;
+    }
+    .ColumsArea{
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -697,6 +804,9 @@ footer{
 @media (max-width: 650px) {
     .subHeadline p{
         width: 70%;
+    }
+    .about{
+        flex-direction: column;
     }
     
     .rates{
@@ -715,8 +825,8 @@ footer{
 
 
 @media (max-width: 500px) {
-    .about{
-        flex-direction: column;
+    .ColumsArea{
+        font-size: 15px;
     }
     .rates{
         font-size: 10px;
@@ -737,5 +847,15 @@ footer{
     }
     .subHeadline{
         font-size: 10px;
+    }
+     .ColumsArea{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .socialLinks{
+        font-size: 12px;
     }
 }
